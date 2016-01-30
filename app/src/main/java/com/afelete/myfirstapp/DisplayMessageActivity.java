@@ -5,6 +5,8 @@ package com.afelete.myfirstapp;
 *
 * */
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,14 +33,17 @@ public class DisplayMessageActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // create an intent and get data for display in a new activity by also setting the layout
         Intent intent = getIntent();
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
         TextView textView = new TextView(this);
         textView.setTextSize(40);
         textView.setText(message);
+        textView.setTextColor(Color.parseColor("#bdbdbd"));
+        //lines to display backgroung
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
+        layout.setBackgroundResource(R.drawable.tree);
         layout.addView(textView);
     }
 
