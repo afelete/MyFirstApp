@@ -47,7 +47,6 @@ public class DisplayMessageActivity extends AppCompatActivity {
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
         layout.setBackgroundResource(R.drawable.tree);
         layout.addView(textView);
-        Toast.makeText(this, "changes",Toast.LENGTH_SHORT).show();
     }
 
 }
