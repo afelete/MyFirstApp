@@ -13,8 +13,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -45,6 +47,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
         layout.setBackgroundResource(R.drawable.tree);
         layout.addView(textView);
+        Toast.makeText(this, "changes",Toast.LENGTH_SHORT).show();
     }
 
 }
