@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -45,6 +46,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
         layout.setBackgroundResource(R.drawable.tree);
         layout.addView(textView);
+        Toast.makeText(this, "me",Toast.LENGTH_SHORT).show();
     }
 
 }
